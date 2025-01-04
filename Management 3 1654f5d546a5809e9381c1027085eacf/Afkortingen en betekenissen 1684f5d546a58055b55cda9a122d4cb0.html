@@ -1,0 +1,684 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Afkortingen en betekenissen</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1684f5d5-46a5-8055-b55c-da9a122d4cb0" class="page sans"><header><h1 class="page-title">Afkortingen en betekenissen</h1><p class="page-description"></p></header><div class="page-body"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1684f5d5-46a5-8011-9cc1-c808bbdcd9f7"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/cursor-click_lightgray.svg"/></div><div style="width:100%"><h3 id="1684f5d5-46a5-8008-ac6d-da813210a6f0" class="">MCDA of MCDM</h3><p id="1684f5d5-46a5-8020-b533-d88c34eff642" class="">voorbeeld: <em><strong><a href="vergelijkings-%20en%20wegingsmatrix%20(Pugh%20VS%20Parker&amp;Be%201684f5d546a5802c9d71c392ec72fb2b.html">Pugh</a></strong></em></p><p id="a8122802-e2fa-4d4e-8e21-8a39a6a25247" class="">multi-criteria decision analysis/multi-criteria decision making is een methode om beslissingen te maken wanneer er meerdere (soms tegenstrijdige) criteria een rol spelen.</p><p id="1704f5d5-46a5-807c-95da-ccebbb297016" class="">Het doel is om een <strong>gestructureerd proces</strong> te bieden, zodat beslissers hun keuzes beter kunnen onderbouwen en transparanter maken.</p></div></figure><hr id="1684f5d5-46a5-803c-a44a-c857c7e1494c"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1684f5d5-46a5-80da-90d5-ce0f8ea3ab4b"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/cursor-click_lightgray.svg"/></div><div style="width:100%"><h2 id="6c460034-9db8-4b0c-9153-06319f7feb97" class=""><a href="PDCA%20(Plan-Do-Check-Act)%201684f5d546a58002a0ece6686b9bcc52.html">PDCA</a></h2></div></figure><hr id="1684f5d5-46a5-80de-89de-cc65948f5616"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1684f5d5-46a5-805c-99f0-f89bf0cfeb3f"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/cursor-click_lightgray.svg"/></div><div style="width:100%"><h2 id="1684f5d5-46a5-80db-b62f-e3fbdf057d2a" class=""><a href="SWOT%201684f5d546a580829e82ef3d325a08c8.html">SWOT</a></h2><ul id="1684f5d5-46a5-8084-ac76-eb2f64fb3f6f" class="bulleted-list"><li style="list-style-type:disc">Strengths</li></ul><ul id="1684f5d5-46a5-801e-b7f1-cae1713d1845" class="bulleted-list"><li style="list-style-type:disc">Weaknesses</li></ul><ul id="1684f5d5-46a5-8015-9530-db44d65e9488" class="bulleted-list"><li style="list-style-type:disc">Opportunities</li></ul><ul id="1684f5d5-46a5-804a-ac3e-e516ccf2ce94" class="bulleted-list"><li style="list-style-type:disc">Threats</li></ul></div></figure><hr id="1684f5d5-46a5-8053-b473-c25704f26473"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1684f5d5-46a5-8099-b0c8-c6f94e565a94"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/cursor-click_lightgray.svg"/></div><div style="width:100%"><h2 id="1684f5d5-46a5-80ee-a675-e21f3218307c" class=""><a href="ADM%20(Architecture%20Development%20Method)%201684f5d546a5803eb419e0cb930c3720.html">ADM</a></h2><p id="1684f5d5-46a5-8004-85c6-cd55de9c79e9" class="">Architecture<br/>Development<br/>Method<br/></p></div></figure><hr id="1704f5d5-46a5-8086-ac59-fab008d39b77"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-8008-9f40-e32f22baa6e7"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="1704f5d5-46a5-8028-a9a7-fdda33750e13" class=""><a href="Cultuur%20binnen%20een%20bedrijf%20of%20organisatie%201664f5d546a580faacbfee2fb58144d2.html">CVS </a></h2><p id="1704f5d5-46a5-8034-9476-d3bee37bf9e7" class="">Computing Values Framework</p></div></figure><hr id="1704f5d5-46a5-80ce-bd19-c9944215fd61"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1684f5d5-46a5-80b9-8baf-dcf0e145140d"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/cursor-click_lightgray.svg"/></div><div style="width:100%"><h2 id="1684f5d5-46a5-8081-a1a7-da2f1166d114" class=""><a href="ADM%20(Architecture%20Development%20Method)%201684f5d546a5803eb419e0cb930c3720.html">TOGAF</a>-framework</h2><p id="1684f5d5-46a5-80eb-ab7f-cd6a5f3e635d" class="">The Open Group Architecture Framework</p></div></figure><hr id="1704f5d5-46a5-8003-8d3d-ddfb21f56dd2"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16e4f5d5-46a5-807c-a42c-d9333931881f"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/cursor-click_lightgray.svg"/></div><div style="width:100%"><h2 id="c3769bdb-bf34-4418-9b99-ab9d8ff0bb8d" class=""><strong><a href="Six%20Sigma%201684f5d546a580fbbfb1d6275f092999.html">DPMO</a></strong></h2><p id="16e4f5d5-46a5-80e5-883f-ef02d56b71e3" class="">Defects Per Million Opportunities</p></div></figure><hr id="1704f5d5-46a5-80fc-954a-fbc2b35d03ef"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16e4f5d5-46a5-80bf-a971-d8441e676ac7"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/cursor-click_lightgray.svg"/></div><div style="width:100%"><h2 id="16e4f5d5-46a5-8029-ab86-dfcfa482876e" class="">CSI</h2><p id="16e4f5d5-46a5-8071-8df3-c45594bcaa2c" class="">Continues Service Improvement</p></div></figure><hr id="1704f5d5-46a5-8021-b251-d0e9f702ef43"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16e4f5d5-46a5-8060-a13b-d9c111732dc0"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/cursor-click_lightgray.svg"/></div><div style="width:100%"><h2 id="16e4f5d5-46a5-804a-9ed8-f42f1d16b31f" class="">KPI</h2><p id="16e4f5d5-46a5-801b-885f-fe166794a16d" class="">Key Performance Indicator</p></div></figure><hr id="1704f5d5-46a5-8088-8d3e-e0f5954b203e"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16e4f5d5-46a5-8053-8924-eaf0f344dfc2"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/cursor-click_lightgray.svg"/></div><div style="width:100%"><h2 id="16e4f5d5-46a5-80fd-93b7-cb31021b5383" class="">KSF</h2><p id="16e4f5d5-46a5-8065-933b-ee8e4bea520b" class="">Kritische Succes Factor</p></div></figure><hr id="1704f5d5-46a5-8031-b68d-dc5779748915"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16e4f5d5-46a5-8041-8537-dce56b520db3"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/cursor-click_lightgray.svg"/></div><div style="width:100%"><h2 id="1183e71f-d675-4993-82c3-43cc04b72640" class=""><a href="ITIL%2016e4f5d546a580e08948f0075dcf1d71.html">ITIL</a></h2><p id="16e4f5d5-46a5-80b5-9af3-cb986912ee18" class="">Information Technology Infrastructure Library.</p></div></figure><hr id="1704f5d5-46a5-8081-b5d9-e4c645f96f6d"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16e4f5d5-46a5-802b-b0a9-d3364c486d18"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/cursor-click_lightgray.svg"/></div><div style="width:100%"><h2 id="bd3e97d3-a29c-4f85-be7b-0226eb3f9b34" class="">ITSM</h2><p id="16e4f5d5-46a5-802a-961d-de894f62f8ac" class="">IT Service Management</p></div></figure><hr id="1704f5d5-46a5-8046-a920-eae5b9cc5e84"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16e4f5d5-46a5-806f-b680-c981b3192a28"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/cursor-click_lightgray.svg"/></div><div style="width:100%"><h2 id="af76bd76-ed86-400f-9d4a-268e8c3719b5" class="">SLA</h2><p id="16e4f5d5-46a5-80b8-9401-c1f6b84decc6" class="">Service Level Agreement.</p></div></figure><hr id="1704f5d5-46a5-8021-b530-dc924f214f6d"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16e4f5d5-46a5-806e-bb6c-c02e16d0f2ff"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/cursor-click_lightgray.svg"/></div><div style="width:100%"><h2 id="16e4f5d5-46a5-8001-9e4c-dae195b4989b" class=""><a href="ITIL%2016e4f5d546a580e08948f0075dcf1d71.html">CI/CD</a></h2><h3 id="16e4f5d5-46a5-800c-8512-c1176ee6b3b1" class=""><strong>Continuous Integration en Continuous Delivery/Deployment</strong></h3><p id="16e4f5d5-46a5-808f-9f7f-f6aad6f79ced" class=""><strong>CI/CD</strong> is een verzameling van best practices en tools die bedoeld zijn om het proces van softwareontwikkeling te automatiseren en te versnellen.</p><hr id="16e4f5d5-46a5-8022-8bd3-c4cf610f1e73"/><p id="16e4f5d5-46a5-80c4-a961-d439ee90d57e" class=""><strong>Continuous Integration (CI)</strong> draait om het frequent samenvoegen (integreren) van code van verschillende ontwikkelaars in een gedeelde codebase. Dit gebeurt automatisch en continu om fouten vroeg te detecteren.<br/><br/><br/><strong>Continuous Delivery (CD)</strong> is de praktijk waarbij de code na Continuous Integration wordt voorbereid om <strong>veilig en betrouwbaar</strong> in productie te worden gezet. Dit houdt in dat de software op elk moment kan worden uitgerold, maar de uitrol zelf is meestal nog <strong>handmatig</strong>.</p></div></figure><hr id="1704f5d5-46a5-8048-a267-e614da8115f4"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16f4f5d5-46a5-805d-aff3-f25acc86d339"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><p id="17a0065d-e791-47fb-bc8e-ed65c9323bbe" class="">CSR en CSRD</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16e4f5d5-46a5-8057-8ff5-dc489d3697cf"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="03f9115f-8da2-4909-8c1b-79bd18f397a1" class="">CSR </h2><p id="16e4f5d5-46a5-8034-93a1-f5641642e631" class=""><a href="CSR%2016e4f5d546a5803da8a5c53285667f34.html">Corporate Social Responsibility</a> (<a href="CSR%2016e4f5d546a5803da8a5c53285667f34.html">MVO</a>)</p><p id="16f4f5d5-46a5-8034-8ca5-cb4924f92624" class="">CSR is een breed concept dat verwijst naar de vrijwillige inspanningen van bedrijven om sociale, milieugerelateerde en economische verantwoordelijkheden in hun bedrijfsvoering te integreren.</p><hr id="16f4f5d5-46a5-80bf-ac74-f3783aeb1b6e"/><p id="16f4f5d5-46a5-801a-8539-c240ae303448" class="">CSR is vaak vrijwillig en gebaseerd op het ethische kompas van een bedrijf. Het omvat activiteiten zoals:</p><ul id="16f4f5d5-46a5-80d1-b53d-d39eda5093c6" class="bulleted-list"><li style="list-style-type:disc">Het verbeteren van arbeidsomstandigheden.</li></ul><ul id="16f4f5d5-46a5-8071-9470-ea72f7e37b3e" class="bulleted-list"><li style="list-style-type:disc">Het minimaliseren van milieu-impact.</li></ul><ul id="16f4f5d5-46a5-80b9-8f37-f8b59aa964b2" class="bulleted-list"><li style="list-style-type:disc">Het steunen van maatschappelijke projecten.</li></ul></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16f4f5d5-46a5-8064-a5a5-cc2be728c4bc"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h3 id="091544d2-4a80-4967-872a-f4e8e63c925a" class=""><strong><a href="CSR%2016e4f5d546a5803da8a5c53285667f34.html">CSRD</a></strong></h3><p id="16f4f5d5-46a5-80a0-bcb3-d24f8e9face6" class="">Corporate Sustainability Reporting Directive</p><p id="16f4f5d5-46a5-8091-96a4-cae7be0a8c48" class="">CSRD is een richtlijn van de Europese Unie die bedrijven verplicht om te rapporteren over de impact van hun activiteiten op milieu, maatschappij en governance (ESG-criteria).</p></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16f4f5d5-46a5-80ca-bf5d-c147286faf35"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h3 id="16f4f5d5-46a5-8081-87d1-c099f121407d" class="">Kernverschil</h3><ul id="16f4f5d5-46a5-80a3-9d34-c1089e302346" class="bulleted-list"><li style="list-style-type:disc"><strong>CSR</strong> is meer een filosofie of strategie die een bedrijf vrijwillig volgt om maatschappelijk verantwoord te opereren.</li></ul><ul id="16f4f5d5-46a5-8002-9e97-db0db3feb5b5" class="bulleted-list"><li style="list-style-type:disc"><strong>CSRD</strong> is een juridische verplichting die bedrijven dwingt om transparant te zijn over hun impact en bijdrage aan duurzaamheid.</li></ul></div></figure></div></figure><hr id="1704f5d5-46a5-8070-bcfb-f89585d9e3ce"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-8028-82be-ce1e8b3b0a54"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="5f069101-4b6b-426a-ad77-da270f69126f" class=""><a href="CSR%2016e4f5d546a5803da8a5c53285667f34.html">3 P’s</a></h2></div></figure><hr id="1704f5d5-46a5-8097-b436-ff8c53c7990d"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16f4f5d5-46a5-80ca-993c-f58371b45803"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="f1e96eb6-d6c2-42c3-9515-3c6efd5955bf" class=""><a href="ESG%2016f4f5d546a580f88758fe92999799af.html">ESG</a></h2><p id="16f4f5d5-46a5-80c9-aa6b-ed5dbfac34a4" class="">Environmental Social Governance</p></div></figure><hr id="1704f5d5-46a5-80c0-8cb6-cc09fb1f28e9"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16f4f5d5-46a5-8096-8c3f-e78fc5118559"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="16f4f5d5-46a5-8035-8a43-d64073b98b0b" class=""><strong><a href="ESG%2016f4f5d546a580f88758fe92999799af.html">SFDR</a></strong></h2><p id="16f4f5d5-46a5-8029-8b4e-f7cd0375c0c6" class="">Sustainable Finance Disclosure Regulation</p><hr id="16f4f5d5-46a5-8033-9569-da143a98da4b"/><p id="16f4f5d5-46a5-8088-a742-c5a11dd03437" class="">De <strong>SFDR</strong> is een verordening die financiële instellingen en vermogensbeheerders verplicht om transparantie te bieden over hoe duurzaamheidsfactoren in hun investeringsbeslissingen worden geïntegreerd.<br/><br/></p></div></figure><hr id="1704f5d5-46a5-8014-a02f-ca369667efe6"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16f4f5d5-46a5-80b9-a0ec-fd345488875b"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="c713fe60-50ab-4ea4-8a46-6bb62b93a439" class="">GDPR</h2><p id="16f4f5d5-46a5-80b7-b89b-cfad96fc27ed" class=""> <strong>general data protection regulation</strong></p><hr id="16f4f5d5-46a5-804f-b1f2-fbdd3f50b890"/><p id="16f4f5d5-46a5-80c2-a6ce-d2b230742fb4" class="">Het beheer en de beveiliging van persoonlijke gegevens van Europese burgers wordt geregeld in de Algemene Verordening Gegevensbescherming (AVG) of GDPR </p></div></figure><hr id="1704f5d5-46a5-80af-9136-d543bad384e3"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="16f4f5d5-46a5-80d3-8dd4-f1f82981a980"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h3 id="779bde6e-2345-46ec-acdd-b42b5992e8d9" class=""><a href="SWOT%201684f5d546a580829e82ef3d325a08c8.html">SWOT</a></h3><p id="16f4f5d5-46a5-8068-9124-c75d25206d6d" class="">Strengths, Weaknesses, Opportunities, Threats</p></div></figure><hr id="1704f5d5-46a5-804f-9862-d7588e4d7db3"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-80a0-b05b-f7271b166773"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="a0165a74-dd34-4f7a-ab81-e4c4bed4a962" class=""><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97.html">Agile </a></h2><p id="1704f5d5-46a5-8043-bc62-e37c6a04ad92" class="">Agile is een flexibele en iteratieve aanpak voor projectmanagement</p></div></figure><hr id="1704f5d5-46a5-8090-8230-ddb2b5e9b340"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-809a-b5f4-f88499b4f5e7"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="1704f5d5-46a5-808e-9ab0-fcd7e98099aa" class=""><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97.html">SCRUM</a></h2><p id="1704f5d5-46a5-802a-ade4-dce70636d824" class="">een Agile methode</p></div></figure><hr id="1704f5d5-46a5-8054-9244-f2e9b8eb85d4"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-800c-8c8a-f7c4572a8a23"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="981a84ef-ed77-4150-bc0d-b39f2f374f21" class=""><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97.html">Kanban</a></h2><p id="3e21576a-4636-4372-b2f2-146b461be63d" class="">een Agile methode</p></div></figure><hr id="1704f5d5-46a5-8078-bc43-dfb2653f6164"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-809e-95dc-dbdd1ba49e86"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="df7bebaf-d4e6-4bda-9200-ff672f4f8bc5" class=""><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97.html">Kaizen</a></h2><p id="82acb4ae-9ba0-4a40-8a15-7e0a5932c17d" class="">een Agile methode</p></div></figure><hr id="1704f5d5-46a5-80cf-9470-c3ca7dc84b3c"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-801e-b714-d609529270fa"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="48d992c4-500c-4dbc-962b-7eeba8c87dea" class=""><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97.html">XP </a>(Extreme Programming)</h2><p id="078a20af-9469-48c4-90fb-2482f1aa3a4f" class="">een Agile methode</p></div></figure><hr id="1704f5d5-46a5-80e3-84b8-c380dd23e9ff"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-8038-9c7d-c2388d035a97"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="3e4d91bf-f7ce-438c-8311-c9c331ca1f87" class=""><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97.html">FDD </a></h2><p id="df1967cd-043d-4508-b0bd-5536472d9b1b" class="">een Agile methode</p></div></figure><hr id="1704f5d5-46a5-8011-ad8b-e85f962910ef"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-8036-8393-c1031c81b211"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="e8816749-3dd9-488f-948f-ac64e1ad213a" class=""><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97.html">DSDM </a></h2><p id="3eb5b0d0-642e-46cb-92be-581139d656d1" class="">een Agile methode</p></div></figure><hr id="1704f5d5-46a5-8095-bc01-f727c61d998a"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-8002-a255-c4e200ae2998"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="53e012f8-5cb4-436f-bb85-93b0fe14fdf6" class=""><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97.html">Christal Methods </a></h2><p id="264b7308-0f8b-4a61-a8d2-c15b174fca5b" class="">een Agile methode</p></div></figure><hr id="1704f5d5-46a5-8058-b189-d3ae867ab5cb"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-8061-86f2-f56ef7bf8c45"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="a5da3422-baa6-4867-8cd5-2287d71f4a39" class=""><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97.html">Wagile</a></h2><p id="69aac5db-704f-4ec2-9c13-10080eec66fd" class="">een Agile methode</p></div></figure><hr id="1704f5d5-46a5-8038-85a1-c6e8e113660c"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-80c9-aba1-d925e04f67c6"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="5f93aa7b-bbf5-44c3-8556-e7af35fb62a5" class=""><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97.html">Sociocratie of S3</a></h2><p id="a1476493-7c0d-428d-bf55-323e6cfbaeec" class="">Sociocratie 3.0 (S3) is <strong>geen traditionele Agile-methode</strong>, maar het deelt wel veel principes met Agile en kan worden gebruikt als aanvulling op Agile-werkwijzen.</p></div></figure><hr id="1704f5d5-46a5-8013-b78b-def8a797aec4"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-8055-8e08-c322cc6f9389"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="1704f5d5-46a5-80d8-9c74-e7fe29cffbaf" class=""><a href="Conflictmanagement%201704f5d546a58060b120ebb8d019f0d1.html">TKI</a></h2><p id="1704f5d5-46a5-8058-a4b4-d873df41495f" class="">Thomas-Kilmann Conflict Mode Instrument</p><p id="1704f5d5-46a5-803a-b308-ec365a79109f" class=""><strong>vijf verschillende </strong>manieren beschrijft waarop mensen omgaan met conflicten</p></div></figure><hr id="1704f5d5-46a5-8001-9961-e9f135c3d263"/><hr id="1704f5d5-46a5-809f-b299-e5268a7babe7"/></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,687 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Real life</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="16f4f5d5-46a5-808a-87a2-ff0718f43c97" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/met_silk_kashan_carpet.jpg" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🌪️</span></div><h1 class="page-title">Real life</h1><p class="page-description"></p></header><div class="page-body"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-8012-8cf4-ce527aea62d8"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="1704f5d5-46a5-8031-ade2-cf1c15cdb6cc" class="">Agile Management</h2><p id="1704f5d5-46a5-8062-8ee7-c264f4765649" class=""><strong>Agile is een flexibele en iteratieve aanpak voor projectmanagement, met name in softwareontwikkeling.</strong> Het doel is om snel en efficiënt te reageren op veranderende eisen en om samenwerking tussen teams, klanten en managers te verbeteren.</p><h3 id="1704f5d5-46a5-8071-bc03-d4abe2d2e705" class="">Waarom Agile belangrijk is</h3><p id="1704f5d5-46a5-8024-80f9-c6253c1c8528" class="">Agile wordt vaak gebruikt omdat het een oplossing biedt voor projecten met veel onzekerheden en veranderende behoeften. Het helpt teams om flexibel te blijven en meer waarde te leveren.</p><blockquote id="1704f5d5-46a5-80a6-8d10-d80740a062f5" class="">Agile draait om flexibiliteit, samenwerking en continue verbetering. Verschillende methoden zoals Scrum en Kanban passen deze principes toe op unieke manieren.</blockquote><hr id="1704f5d5-46a5-801d-9c1f-e61b7b680ec7"/><h3 id="1704f5d5-46a5-8086-8476-fe9508a35c42" class="">Belangrijke concepten:</h3><ol type="1" id="1704f5d5-46a5-8028-9eb4-ce32b01d5d90" class="numbered-list" start="1"><li><strong>Kleine teams en korte iteraties</strong>:<ul id="1704f5d5-46a5-803f-b617-fc73be70b2bf" class="bulleted-list"><li style="list-style-type:disc">Teams werken in korte cycli, genaamd sprints (bij Scrum), waarin ze specifieke doelen behalen.</li></ul></li></ol><ol type="1" id="1704f5d5-46a5-801b-89c1-dc9302a38ac2" class="numbered-list" start="2"><li><strong>Dynamische eisen</strong>:<ul id="1704f5d5-46a5-8037-927b-c6664cf9f063" class="bulleted-list"><li style="list-style-type:disc">De eisen kunnen tijdens het project veranderen, en de aanpak is flexibel genoeg om dit aan te passen.</li></ul></li></ol><ol type="1" id="1704f5d5-46a5-8096-a16a-fc9b6c89099f" class="numbered-list" start="3"><li><strong>Nauwe samenwerking</strong>:<ul id="1704f5d5-46a5-80eb-a18c-c428bb46f6a5" class="bulleted-list"><li style="list-style-type:disc">Sterke interactie tussen verschillende partijen, zoals klanten en teamleden, is essentieel.</li></ul></li></ol></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-8036-9122-d606d3cff14f"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h3 id="1704f5d5-46a5-80e2-88b7-e6f71e3aaa1a" class="">Methodologieën binnen Agile</h3><ol type="1" id="1704f5d5-46a5-80e9-9562-dadc81573627" class="numbered-list" start="1"><li><strong><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97.html">Scrum</a></strong>:<ul id="1704f5d5-46a5-80f7-8ded-eb866472b348" class="bulleted-list"><li style="list-style-type:disc">Framework met rollen zoals de Product Owner en Scrum Master.</li></ul><ul id="1704f5d5-46a5-802a-94e3-ee7777b6bdf8" class="bulleted-list"><li style="list-style-type:disc">Gebruik van sprints en dagelijkse stand-up meetings.</li></ul></li></ol><ol type="1" id="1704f5d5-46a5-80c4-8fad-ef7afe99d96c" class="numbered-list" start="2"><li><strong><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97.html">Kanban</a></strong>:<ul id="1704f5d5-46a5-8064-94fa-ecb3a7d54fa7" class="bulleted-list"><li style="list-style-type:disc">Visualisatie van taken op een bord met kolommen (bijv. &quot;Te doen&quot;, &quot;In uitvoering&quot;, &quot;Klaar&quot;).</li></ul><ul id="1704f5d5-46a5-808d-a831-f802c7d9a26c" class="bulleted-list"><li style="list-style-type:disc">Continu verbeterproces zonder vaste iteraties.</li></ul></li></ol><ol type="1" id="1704f5d5-46a5-80d9-beed-c5e003cb2337" class="numbered-list" start="3"><li><strong><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97.html">Kaizen</a></strong>:<ul id="1704f5d5-46a5-8087-9c80-fb161bc0d1a8" class="bulleted-list"><li style="list-style-type:disc">Gericht op voortdurende verbetering, waarbij teamleden constant zoeken naar manieren om processen efficiënter te maken.</li></ul></li></ol><ol type="1" id="1704f5d5-46a5-8003-9743-e1b202a4a021" class="numbered-list" start="4"><li><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97.html">XP</a><ul id="1704f5d5-46a5-80cb-a21c-ea85ba0c13ac" class="bulleted-list"><li style="list-style-type:disc">Richt zich op het verbeteren van de kwaliteit van software en het vermogen om te reageren op veranderende klantbehoeften.</li></ul><ul id="1704f5d5-46a5-80dc-9800-d1c6783ca233" class="bulleted-list"><li style="list-style-type:disc">Kenmerken zijn paarprogrammeren, testgedreven ontwikkeling (TDD), frequente releases, en voortdurende klantbetrokkenheid.</li></ul></li></ol><ol type="1" id="1704f5d5-46a5-807c-8a75-d1065039d583" class="numbered-list" start="5"><li>FFD<ul id="1704f5d5-46a5-8066-b12d-f7c392a5e268" class="bulleted-list"><li style="list-style-type:disc">Een iteratieve en incrementele methode, gericht op het bouwen van software door specifieke functies (features) te ontwerpen en te ontwikkelen.</li></ul><ul id="1704f5d5-46a5-8097-ba7c-d2863637e006" class="bulleted-list"><li style="list-style-type:disc">Gebruik van duidelijke processen zoals het creëren van een model, het opstellen van een featurelijst, en korte iteraties gericht op specifieke functionaliteiten.</li></ul></li></ol><ol type="1" id="1704f5d5-46a5-8084-aa8a-d3b9ac2f73db" class="numbered-list" start="6"><li>DSDM<ul id="1704f5d5-46a5-80c1-8e14-fcc990c5406c" class="bulleted-list"><li style="list-style-type:disc">Concentreert zich op projecten waar snelheid en flexibiliteit vereist zijn, met nadruk op samenwerking en gebruik van tijdsblokken (timeboxing).</li></ul><ul id="1704f5d5-46a5-8094-a8bb-c4724fcbd6b3" class="bulleted-list"><li style="list-style-type:disc">Basisprincipes zijn het betrekken van gebruikers, het geven van prioriteit aan vereisten (MoSCoW-methode), en een iteratieve benadering.</li></ul></li></ol><ol type="1" id="1704f5d5-46a5-80af-8f67-fad1266f5000" class="numbered-list" start="7"><li>Christal Methods<ul id="1704f5d5-46a5-8086-9651-e617c8b5cacb" class="bulleted-list"><li style="list-style-type:disc">Een familie van methodologieën die variëren in zwaarte (zoals Crystal Clear of Crystal Orange), afhankelijk van de grootte en de complexiteit van het project.</li></ul><ul id="1704f5d5-46a5-8052-877d-c856b19271ae" class="bulleted-list"><li style="list-style-type:disc">De nadruk ligt op menselijk contact, samenwerking en eenvoud, met de flexibiliteit om processen aan te passen aan de behoeften van het team.</li></ul></li></ol><ol type="1" id="1704f5d5-46a5-80d4-ae82-fbb40f0a0d3a" class="numbered-list" start="8"><li>Wagile<ul id="1704f5d5-46a5-8085-80ad-ca7d226d6c4f" class="bulleted-list"><li style="list-style-type:disc">Een hybride model dat elementen van de traditionele watervalaanpak (Waterfall) en Agile-methodologie combineert.</li></ul><ul id="1704f5d5-46a5-80be-a887-fcad58fd2f9a" class="bulleted-list"><li style="list-style-type:disc">Wordt vaak gebruikt in omgevingen waar een strakke planning nodig is, maar ook flexibiliteit vereist is voor wijzigingen tijdens het project.</li></ul></li></ol><ol type="1" id="1704f5d5-46a5-8007-8d15-df4ecb6a0a86" class="numbered-list" start="9"><li>Sociocratie of S3<ul id="1704f5d5-46a5-803a-968d-d2797b4fa54b" class="bulleted-list"><li style="list-style-type:disc">Een sociale technologie die zelfsturing en zelforganisatie in teams en organisaties ondersteunt.</li></ul><ul id="1704f5d5-46a5-804a-8d7d-d47983e31700" class="bulleted-list"><li style="list-style-type:disc">Belangrijkste principes zijn consent-besluitvorming, werken met rollen en domeinen, en regelmatige reflectie en feedback.</li></ul><ul id="1704f5d5-46a5-80c0-ae8b-dbcbaef27b21" class="bulleted-list"><li style="list-style-type:disc">Doel is het creëren van een gelijkwaardige, effectieve, en duurzame samenwerking, met nadruk op vertrouwen en transparantie.</li></ul></li></ol></div></figure><div id="1704f5d5-46a5-8033-b0b5-cc3f44c90350" class="column-list"><div id="1704f5d5-46a5-80a3-b08a-e3638c49b3ce" style="width:50%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-80df-8f37-e623c0a3d010"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="1704f5d5-46a5-803a-bdac-ceed231850b1" class="">Scrum</h2><p id="1704f5d5-46a5-8054-93b5-f6e55c6364ba" class="">Scrum is een Agile-framework dat wordt gebruikt om complexe projecten te beheren.</p><ul id="1704f5d5-46a5-807e-aad6-d6aa1f0e3e11" class="bulleted-list"><li style="list-style-type:disc"><strong>Belangrijkste kenmerken</strong>:<ul id="1704f5d5-46a5-8055-9e00-d153c550f18b" class="bulleted-list"><li style="list-style-type:circle"><strong>Rollen</strong>:<ul id="1704f5d5-46a5-8060-8659-ef3b33de511c" class="bulleted-list"><li style="list-style-type:square"><strong>Product Owner</strong>: Vertegenwoordigt de klant en bepaalt welke taken prioriteit krijgen.</li></ul><ul id="1704f5d5-46a5-80dd-a75b-c936d9650896" class="bulleted-list"><li style="list-style-type:square"><strong>Scrum Master</strong>: Begeleidt het team en zorgt ervoor dat Scrum-regels worden gevolgd.</li></ul><ul id="1704f5d5-46a5-80f0-b8fd-cffb0330f989" class="bulleted-list"><li style="list-style-type:square"><strong>Teamleden</strong>: Multidisciplinaire groep die het werk uitvoert.</li></ul></li></ul><ul id="1704f5d5-46a5-80c6-9ee6-c7b01bbb2d52" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-default"><mark class="highlight-orange_background"><strong>Sprints</strong></mark></mark>: Korte tijdsperiodes (meestal 2-4 weken) waarin een specifiek deel van het project wordt voltooid.</li></ul><ul id="1704f5d5-46a5-80dc-8405-db9d2285fad1" class="bulleted-list"><li style="list-style-type:circle"><strong>Artefacten</strong>: Backlog, Sprint Backlog, en het Increment.</li></ul><ul id="1704f5d5-46a5-8084-84a8-d5f6f3d52aa5" class="bulleted-list"><li style="list-style-type:circle"><strong>Rituelen</strong>: Dagelijkse stand-up meetings, Sprint Planning, Retrospective, en Review.</li></ul></li></ul><ul id="1704f5d5-46a5-80ff-99df-e7ba2f85e97e" class="bulleted-list"><li style="list-style-type:disc"><strong>Doel</strong>: Efficiënt inspelen op veranderingen en waarde leveren in korte iteraties.</li></ul></div></figure></div><div id="1704f5d5-46a5-80d4-a2b1-f4a6ffaab2b0" style="width:50%" class="column"><figure id="1704f5d5-46a5-804b-9636-e8d93e386f02" class="image"><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97/image.png"><img style="width:576px" src="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97/image.png"/></a></figure><p id="1704f5d5-46a5-809f-bcc4-c060cca3c03e" class="">
+</p></div></div><div id="1704f5d5-46a5-803e-bf0e-eb18ec875ca6" class="column-list"><div id="1704f5d5-46a5-8051-91b2-dbc087bb52d6" style="width:50%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-80df-91c0-e183d216d055"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="1704f5d5-46a5-80a1-97e3-ddc31752c3dc" class="">Kanban</h2><p id="1704f5d5-46a5-8067-9701-e2e888d7253b" class="">Kanban is een methode gericht op het visueel beheren van workflows.</p><ul id="1704f5d5-46a5-8003-9447-e1da6dcd292d" class="bulleted-list"><li style="list-style-type:disc"><strong>Belangrijkste kenmerken</strong>:<ul id="1704f5d5-46a5-803b-b7b7-de9294a79d4b" class="bulleted-list"><li style="list-style-type:circle"><strong>Visueel systeem</strong>: Taken worden weergegeven op een bord, verdeeld in kolommen zoals &quot;Te doen&quot;, &quot;In uitvoering&quot;, en &quot;Afgerond&quot;.</li></ul><ul id="1704f5d5-46a5-80ac-96e6-fea496248908" class="bulleted-list"><li style="list-style-type:circle"><strong>WIP-limieten</strong>: Beperking van het aantal taken dat tegelijk in uitvoering mag zijn, om overbelasting te voorkomen.</li></ul><ul id="1704f5d5-46a5-80a8-b275-d252d19d2253" class="bulleted-list"><li style="list-style-type:circle"><strong>Continue verbetering</strong>: Teams optimaliseren processen op basis van de doorstroming van taken.</li></ul></li></ul><ul id="1704f5d5-46a5-80ae-a331-fa82530a361b" class="bulleted-list"><li style="list-style-type:disc"><strong>Doel</strong>: Efficiënte werkstromen creëren door verspilling te minimaliseren en de voortgang te monitoren.</li></ul></div></figure></div><div id="1704f5d5-46a5-80cf-b100-edada26aaaf7" style="width:50%" class="column"><figure id="1704f5d5-46a5-8040-a114-f252bd6f2686" class="image"><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97/image%201.png"><img style="width:672px" src="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97/image%201.png"/></a></figure></div></div><div id="1704f5d5-46a5-8063-a7d1-c953b388d379" class="column-list"><div id="1704f5d5-46a5-80f1-9c59-ffd94cc1afc6" style="width:50%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-8033-be2d-c43f6610ed63"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="0f3bd0df-b034-434d-b4e7-38b071580c50" class="">Kaizen</h2><p id="1704f5d5-46a5-8028-af84-db498bcdbca5" class="">Kaizen is een filosofie van continue verbetering, gericht op kleine, incrementele verbeteringen.</p><ul id="1704f5d5-46a5-8059-9f99-ff194ca0f4c3" class="bulleted-list"><li style="list-style-type:disc"><strong>Belangrijkste kenmerken</strong>:<ul id="1704f5d5-46a5-806b-835e-e09134b3048c" class="bulleted-list"><li style="list-style-type:circle"><strong>Betrokkenheid van medewerkers</strong>: Iedereen binnen het team of de organisatie draagt bij aan verbeteringen.</li></ul><ul id="1704f5d5-46a5-80d8-bf78-c8a21f8fb978" class="bulleted-list"><li style="list-style-type:circle"><strong>Kleine veranderingen</strong>: Focus op het verbeteren van dagelijkse processen in plaats van grote transformaties.</li></ul><ul id="1704f5d5-46a5-80ad-a45c-e73a17468a83" class="bulleted-list"><li style="list-style-type:circle"><strong>Cirkels</strong>: Gebruik van &quot;Kaizen-cirkels&quot;, waar teams regelmatig samenkomen om verbeteringen te bespreken.</li></ul></li></ul><ul id="1704f5d5-46a5-806e-9763-d4301efccbfd" class="bulleted-list"><li style="list-style-type:disc"><strong>Doel</strong>: Processen efficiënter maken, kwaliteit verhogen, en verspilling verminderen.</li></ul></div></figure></div><div id="1704f5d5-46a5-802d-9660-f605563d7fba" style="width:50%" class="column"><figure id="1704f5d5-46a5-80da-931f-ed5748180733" class="image"><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97/image%202.png"><img style="width:432px" src="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97/image%202.png"/></a></figure></div></div><div id="1704f5d5-46a5-803d-9fdd-d9ef5a023bdd" class="column-list"><div id="1704f5d5-46a5-8057-8b69-fde3d4676296" style="width:50%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-80a4-b1c9-de9d35da3941"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="1704f5d5-46a5-8065-8571-edc1c1732c4c" class="">XP (<strong>Extreme Programming)</strong></h2><p id="1704f5d5-46a5-8017-a961-dcff1cb1171f" class="">XP is een Agile-methodologie gericht op het verbeteren van softwarekwaliteit en aanpasbaarheid aan veranderende eisen.</p><ul id="1704f5d5-46a5-8006-ade5-dff0b605b8eb" class="bulleted-list"><li style="list-style-type:disc"><strong>Belangrijkste kenmerken</strong>:<ul id="1704f5d5-46a5-8029-8df0-c1610748b927" class="bulleted-list"><li style="list-style-type:circle"><strong>Technieken</strong>: Paarprogrammeren, testgedreven ontwikkeling (TDD), continue integratie, en frequente releases.</li></ul><ul id="1704f5d5-46a5-8011-bb62-c4e1a55a4f72" class="bulleted-list"><li style="list-style-type:circle"><strong>Klantbetrokkenheid</strong>: De klant is continu betrokken bij het ontwikkelproces.</li></ul><ul id="1704f5d5-46a5-80e2-9af9-ce21d39a086a" class="bulleted-list"><li style="list-style-type:circle"><strong>Iteraties</strong>: Korte ontwikkelcycli, vaak van één tot twee weken.</li></ul></li></ul><ul id="1704f5d5-46a5-803b-a2b7-f1c3546a505d" class="bulleted-list"><li style="list-style-type:disc"><strong>Doel</strong>: Software opleveren die nauw aansluit bij klantbehoeften, met een hoge mate van technische kwaliteit.</li></ul></div></figure></div><div id="1704f5d5-46a5-8069-9ed7-c71cc4e7acd9" style="width:50%" class="column"><figure id="1704f5d5-46a5-8099-93f7-eae7feb4bbfb" class="image"><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97/image%203.png"><img style="width:432px" src="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97/image%203.png"/></a></figure></div></div><div id="1704f5d5-46a5-808f-90dd-c3fd79ba2afd" class="column-list"><div id="1704f5d5-46a5-8003-bcd4-f1b0bdc74b82" style="width:50%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-80e3-977c-e00ddb202d97"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="96877d39-5d33-4332-8195-87f1e5d1a200" class="">FDD(Feature Driven Development)</h2><p id="1704f5d5-46a5-8091-8d34-da260023cedf" class="">(of zoals in de slides FFD lol)</p><p id="1704f5d5-46a5-8050-8f19-c20944fe4ab9" class="">FDD is een Agile-aanpak gericht op het bouwen van specifieke functionaliteiten (features).</p><ul id="1704f5d5-46a5-80d5-ab43-ea58c73b8098" class="bulleted-list"><li style="list-style-type:disc"><strong>Belangrijkste kenmerken</strong>:<ul id="1704f5d5-46a5-80d6-8c5c-d700f7dfaa4d" class="bulleted-list"><li style="list-style-type:circle"><strong>Kenmerk-gebaseerd</strong>: Het project wordt opgesplitst in kleine, afzonderlijke features die één voor één worden ontworpen en ontwikkeld.</li></ul><ul id="1704f5d5-46a5-80f2-ae92-db48daf1571d" class="bulleted-list"><li style="list-style-type:circle"><strong>Duidelijke processen</strong>: Zoals het opstellen van een domeinmodel, creëren van een featurelijst, en plannen van iteraties.</li></ul><ul id="1704f5d5-46a5-808a-bfdc-c6d144cb361f" class="bulleted-list"><li style="list-style-type:circle"><strong>Teamsamenwerking</strong>: Betrekking van domeinexperts en ontwikkelaars.</li></ul></li></ul><ul id="1704f5d5-46a5-80fb-a610-e679d6b94f1f" class="bulleted-list"><li style="list-style-type:disc"><strong>Doel</strong>: Grote projecten beheren door focus op concrete, waardevolle deliverables.</li></ul></div></figure></div><div id="1704f5d5-46a5-807e-948b-fa89d7902645" style="width:50%" class="column"><figure id="1704f5d5-46a5-80f4-a24d-c8c5361f7a44" class="image"><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97/image%204.png"><img style="width:418.453125px" src="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97/image%204.png"/></a></figure></div></div><div id="1704f5d5-46a5-8029-844e-ec418152e111" class="column-list"><div id="1704f5d5-46a5-803c-a2b4-f5f935f92542" style="width:50%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-8027-8f8e-c2c5042a3e42"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="1704f5d5-46a5-8071-bf83-c32dfe0e82e0" class="">DSDM (Dynamic Systems Development Method)</h2><p id="1704f5d5-46a5-80d5-abac-d950f54182c2" class="">DSDM is een Agile-methodologie die flexibiliteit combineert met een duidelijke structuur.</p><ul id="1704f5d5-46a5-8048-a250-e946e85cf079" class="bulleted-list"><li style="list-style-type:disc"><strong>Belangrijkste kenmerken</strong>:<ul id="1704f5d5-46a5-80d9-b617-fda27c1023b6" class="bulleted-list"><li style="list-style-type:circle"><strong>Focus op samenwerking</strong>: Actieve betrokkenheid van gebruikers en belanghebbenden.</li></ul><ul id="1704f5d5-46a5-8049-b34a-d4442354dd1f" class="bulleted-list"><li style="list-style-type:circle"><strong>MoSCoW-methode</strong>: Prioriteren van eisen (Must haves, Should haves, Could haves, Won’t haves).</li></ul><ul id="1704f5d5-46a5-809c-a3b3-faa5116a7505" class="bulleted-list"><li style="list-style-type:circle"><strong>Iteratieve ontwikkeling</strong>: Continue verbetering en aanpassing tijdens het project.</li></ul><ul id="1704f5d5-46a5-8035-a326-d25950e37696" class="bulleted-list"><li style="list-style-type:circle"><strong>Tijd- en budgetbeheer</strong>: Werken binnen vaste tijds- en kostenlimieten (timeboxing).</li></ul></li></ul><ul id="1704f5d5-46a5-80e2-9781-f43b732525ec" class="bulleted-list"><li style="list-style-type:disc"><strong>Doel</strong>: Betrouwbare en kwalitatieve oplevering van projecten binnen strikte randvoorwaarden.</li></ul></div></figure></div><div id="1704f5d5-46a5-800f-879c-e9779f27cf92" style="width:50%" class="column"><figure id="1704f5d5-46a5-8056-ae7f-df7058b2cec4" class="image"><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97/image%205.png"><img style="width:432px" src="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97/image%205.png"/></a></figure></div></div><div id="1704f5d5-46a5-805f-bd3f-db9ddc4379b4" class="column-list"><div id="1704f5d5-46a5-80a7-be7d-e51fa51411d4" style="width:50%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-80d2-8084-e88757eca3f1"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="8a55eec3-a046-4df7-b832-6f5db98dbc7c" class="">Crystal Methods</h2><p id="1704f5d5-46a5-8000-b564-c74ba273a83f" class="">Crystal is een verzameling van Agile-methodologieën, die variëren in complexiteit en worden aangepast aan de grootte en aard van het project.</p><ul id="1704f5d5-46a5-8052-b27a-fbf7fb189f8b" class="bulleted-list"><li style="list-style-type:disc"><strong>Belangrijkste kenmerken</strong>:<ul id="1704f5d5-46a5-809d-ae8f-cc331d01c9ab" class="bulleted-list"><li style="list-style-type:circle"><strong>Flexibiliteit</strong>: Processen aanpassen aan de behoeften van het team en de organisatie.</li></ul><ul id="1704f5d5-46a5-804d-a5eb-d05f8422cf4c" class="bulleted-list"><li style="list-style-type:circle"><strong>Samenwerking</strong>: Focus op menselijke interactie en teamdynamiek.</li></ul><ul id="1704f5d5-46a5-8077-acff-c648ce0f936f" class="bulleted-list"><li style="list-style-type:circle"><strong>Kleurenindeling</strong>: Verschillende methoden (zoals Crystal Clear of Crystal Orange) gebaseerd op teamgrootte en projectcomplexiteit.</li></ul></li></ul><ul id="1704f5d5-46a5-8045-8c7c-e434c793bbd3" class="bulleted-list"><li style="list-style-type:disc"><strong>Doel</strong>: Efficiëntie verhogen door menselijke interactie en eenvoud te combineren.</li></ul></div></figure></div><div id="1704f5d5-46a5-8071-a9f0-e4bf19122aa2" style="width:50%" class="column"><figure id="1704f5d5-46a5-8069-8547-db91148c80db" class="image"><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97/image%206.png"><img style="width:576px" src="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97/image%206.png"/></a></figure></div></div><div id="1704f5d5-46a5-80cf-90d4-f80d4b005d78" class="column-list"><div id="1704f5d5-46a5-8004-b27d-e7943abbe64b" style="width:50%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-80cd-ab80-d5518c1d7ef1"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="8ede9138-daa7-4933-8149-2afc9b251491" class="">Wagile</h2><p id="1704f5d5-46a5-803e-b37c-d7a7ff32faf2" class="">Wagile is een hybride aanpak die kenmerken van zowel Agile als de watervalaanpak (Waterfall) combineert.</p><ul id="1704f5d5-46a5-8017-abdc-fdea01b5652b" class="bulleted-list"><li style="list-style-type:disc"><strong>Belangrijkste kenmerken</strong>:<ul id="1704f5d5-46a5-80a8-b467-e957cfe3660c" class="bulleted-list"><li style="list-style-type:circle"><strong>Structuur van Waterfall</strong>: Heldere fasen zoals ontwerp, ontwikkeling, en testen.</li></ul><ul id="1704f5d5-46a5-8053-a25c-d57666aa5d45" class="bulleted-list"><li style="list-style-type:circle"><strong>Flexibiliteit van Agile</strong>: Mogelijkheid om veranderingen door te voeren tijdens het project.</li></ul><ul id="1704f5d5-46a5-808e-8ecb-c3b33ecae24e" class="bulleted-list"><li style="list-style-type:circle"><strong>Toepassing</strong>: Geschikt voor organisaties die gewend zijn aan een traditionele aanpak, maar toch flexibiliteit nodig hebben.</li></ul></li></ul><ul id="1704f5d5-46a5-806b-b9ca-dfa677a22778" class="bulleted-list"><li style="list-style-type:disc"><strong>Doel</strong>: Beste van beide werelden combineren voor projecten die enige structuur, maar ook wendbaarheid vereisen.</li></ul></div></figure></div><div id="1704f5d5-46a5-80a8-bcba-d2054bc17e02" style="width:50%" class="column"><figure id="1704f5d5-46a5-8024-b42e-c8f1e027408b" class="image"><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97/image%207.png"><img style="width:504.984375px" src="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97/image%207.png"/></a></figure><p id="1704f5d5-46a5-8085-bb77-cbaa0b3bf15a" class="">
+</p></div></div><div id="1704f5d5-46a5-807b-86fe-f45424d9f02d" class="column-list"><div id="1704f5d5-46a5-80d5-aa7d-d3b6edcb1d42" style="width:50%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-803e-9505-e0a356e32276"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="74848069-bcad-411b-8b2f-403145d5227c" class="">Sociocratie of S3</h2><p id="1704f5d5-46a5-80bc-8cdf-feadc5ac9b9c" class="">S3 is een methode voor zelforganisatie en gelijkwaardige besluitvorming in teams.</p><ul id="1704f5d5-46a5-8062-94d5-f393615684b8" class="bulleted-list"><li style="list-style-type:disc"><strong>Belangrijkste kenmerken</strong>:<ul id="1704f5d5-46a5-804f-b636-c1dfe404ca11" class="bulleted-list"><li style="list-style-type:circle"><strong>Consent-besluitvorming</strong>: Besluiten worden genomen als niemand er zwaar bezwaar tegen heeft.</li></ul><ul id="1704f5d5-46a5-8050-b1c5-d615c3bd0e12" class="bulleted-list"><li style="list-style-type:circle"><strong>Rollen en domeinen</strong>: Teams werken in duidelijk gedefinieerde rollen en verantwoordelijkheden.</li></ul><ul id="1704f5d5-46a5-808c-a962-c7312f4b6e23" class="bulleted-list"><li style="list-style-type:circle"><strong>Iteratief proces</strong>: Regelmatige reflectie en aanpassing van werkprocessen.</li></ul><ul id="1704f5d5-46a5-8082-aedd-fe54f14cc52a" class="bulleted-list"><li style="list-style-type:circle"><strong>Transparantie</strong>: Focus op vertrouwen en open communicatie.</li></ul></li></ul><ul id="1704f5d5-46a5-8086-b5ca-e70eee8d7cca" class="bulleted-list"><li style="list-style-type:disc"><strong>Doel</strong>: Het creëren van een omgeving waarin teams zelfstandig, efficiënt, en duurzaam samenwerken.</li></ul><p id="1704f5d5-46a5-80f9-bab0-f862071c29b1" class="">Laat weten of je nog verdere details wilt over specifieke methodologieën!</p></div></figure></div><div id="1704f5d5-46a5-80f0-a52e-eda69bdbff60" style="width:50%" class="column"><figure id="1704f5d5-46a5-8041-8545-f2431fe787af" class="image"><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97/image%208.png"><img style="width:330.984375px" src="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97/image%208.png"/></a></figure></div></div><hr id="1704f5d5-46a5-80ec-ac31-f443aac8689b"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1704f5d5-46a5-809d-99dc-db997fb75036"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/book_lightgray.svg"/></div><div style="width:100%"><h2 id="1704f5d5-46a5-80f7-adab-c28d7d099760" class="">Meer over S3</h2><figure id="1704f5d5-46a5-8098-b124-f52106d9ae74" class="image"><a href="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97/image%209.png"><img style="width:645.984375px" src="Real%20life%2016f4f5d546a5808a87a2ff0718f43c97/image%209.png"/></a></figure><p id="1704f5d5-46a5-80dd-ba56-eaa35188a644" class="">Sociocratie 3.0 - ook wel S3 genoemd - is een methodologie of ‘sociale technologie’ die zelfsturing en zelforganisatie faciliteert. </p><p id="1704f5d5-46a5-8056-a280-e1466ca07019" class="">Het biedt een hedendaags antwoord op actuele uitdagingen in gemeenschappen, organisaties en teams: een lerende en stromende organisatie worden waarin alle wijsheid wordt benut.</p><hr id="1704f5d5-46a5-80b4-8d81-f8bbbe2e056e"/><p id="1704f5d5-46a5-8010-bf00-d035849f0bf1" class="">S3 is een toegankelijke manier om meer gelijkwaardigheid te organiseren, inspraak te regelen en invloed te verdelen in een organisatie.</p><p id="1704f5d5-46a5-80ab-bf2a-c3700fb4427e" class="">Het is gebaseerd op eenvoudige onderliggende principes die ervoor zorgen dat er een cultuur van vertrouwen ontstaat waarin mensen slimmer, effectiever en duurzamer kunnen samenwerken.</p><h3 id="1704f5d5-46a5-808f-a2cd-efb8708aa77e" class="">Hoe begin je ermee? (voorbeelden)</h3><p id="1704f5d5-46a5-8076-afa9-df145e594527" class="">Stap 1: Start met &quot;Consent-besluitvorming”</p><ul id="1704f5d5-46a5-80fd-9240-e2400a4f5b1a" class="bulleted-list"><li style="list-style-type:disc">Dit betekent dat beslissingen worden genomen zolang niemand er zwaar bezwaar tegen heeft.</li></ul><p id="1704f5d5-46a5-8040-9d98-ffb788535eaf" class="">Stap 2: Gebruik Rollen in je Team</p><ul id="1704f5d5-46a5-80ec-bf37-d14ee627eca8" class="bulleted-list"><li style="list-style-type:disc">Verdeel verantwoordelijkheden en maak duidelijk wie waarover beslist.</li></ul><p id="1704f5d5-46a5-8051-b3e6-c3fae4c98fa4" class="">Stap 3: Maak Vergaderingen Effectief</p><ul id="1704f5d5-46a5-8098-88f6-c256db6dd051" class="bulleted-list"><li style="list-style-type:disc">Gebruik simpele technieken om je vergaderingen productiever te maken.</li></ul><p id="1704f5d5-46a5-8054-a787-e37c1caf9929" class="">Stap 4: Reflecteer Regelmatig</p><ul id="1704f5d5-46a5-80a2-8fa4-d58122d904cd" class="bulleted-list"><li style="list-style-type:disc">Kijk samen terug op hoe het gaat en verbeter waar nodig.</li></ul><p id="1704f5d5-46a5-80bd-bbad-ebf460dd6a97" class="">Stap 5: Bouw het Stapsgewijs op</p><ul id="1704f5d5-46a5-800c-95d3-e019ab9c8354" class="bulleted-list"><li style="list-style-type:disc">Begin klein. Kies één ding, zoals betere vergaderingen of besluitvorming in consent.</li></ul><ul id="1704f5d5-46a5-8001-8d47-c6351ce49a93" class="bulleted-list"><li style="list-style-type:disc">Als dat werkt, voeg je stap voor stap andere elementen van S3 toe.</li></ul><hr id="1704f5d5-46a5-804b-a4c9-ece64a2bd037"/><h3 id="1704f5d5-46a5-80c1-9596-c970974a7c19" class="">Een Praktisch Voorbeeld</h3><ol type="1" id="1704f5d5-46a5-802c-afb5-d61d3f01b33a" class="numbered-list" start="1"><li><strong>Probleem</strong>: Taken blijven liggen omdat niemand weet wie verantwoordelijk is.</li></ol><ol type="1" id="1704f5d5-46a5-80e6-9a90-c0ab87aac159" class="numbered-list" start="2"><li><strong>Oplossing met S3</strong>:<ul id="1704f5d5-46a5-80ee-8250-c15eef7602cc" class="bulleted-list"><li style="list-style-type:disc">Stel een vergadering voor om rollen te bespreken.</li></ul><ul id="1704f5d5-46a5-8033-a607-dfc4e6d90278" class="bulleted-list"><li style="list-style-type:disc">Gebruik consent-besluitvorming om rollen te verdelen:<ul id="1704f5d5-46a5-80bb-b3d8-d0ca53fbe9f1" class="bulleted-list"><li style="list-style-type:circle">&quot;Wie wil de notulist zijn?&quot; → Geen zwaar bezwaar? Die persoon doet het.</li></ul><ul id="1704f5d5-46a5-8064-b23f-f7c5c8514f41" class="bulleted-list"><li style="list-style-type:circle">&quot;Wie wil de planner zijn?&quot; → Pas aan totdat iedereen tevreden is.</li></ul></li></ul><ul id="1704f5d5-46a5-800a-b5c8-c416dce33d76" class="bulleted-list"><li style="list-style-type:disc">Plan een evaluatie over een maand om te zien of deze rolverdeling werkt.</li></ul></li></ol></div></figure><p id="1704f5d5-46a5-8040-bd33-ddae9a623fbd" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
